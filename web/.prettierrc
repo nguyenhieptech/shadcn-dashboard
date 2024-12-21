@@ -1,0 +1,23 @@
+{
+  "semi": true,
+  "singleQuote": false,
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "trailingComma": "es5",
+  "jsxSingleQuote": false,
+  "bracketSameLine": false,
+  "tabWidth": 2,
+  "printWidth": 90,
+  "organizeImportsSkipDestructiveCodeActions": true,
+  "tailwindAttributes": [
+    "enter",
+    "enterFrom",
+    "enterTo",
+    "entered",
+    "leave",
+    "leaveFrom",
+    "leaveTo"
+  ],
+  "tailwindFunctions": ["clsx", "cva"],
+  "plugins": ["prettier-plugin-organize-imports", "prettier-plugin-tailwindcss"]
+}
