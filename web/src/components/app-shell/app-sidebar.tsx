@@ -28,7 +28,7 @@ import * as React from "react";
 // This is sample data.
 const data = {
   user: {
-    name: "Leo",
+    name: "Leo Nguyen",
     email: "leonguyen@example.com",
     avatar: "/leo-nguyen.jpg",
   },
