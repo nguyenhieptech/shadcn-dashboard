@@ -1,5 +1,6 @@
 import { TailwindIndicator } from "@/components/tailwind-indicator";
 import { ThemeProvider } from "@/components/theme-provider";
+import { SidebarProvider } from "@/components/ui/sidebar";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -21,8 +22,10 @@ export default function RootLayout({ children }: React.PropsWithChildren) {
           enableSystem
           disableTransitionOnChange
         >
-          {children}
-          <TailwindIndicator />
+          <SidebarProvider>
+            {children}
+            <TailwindIndicator />
+          </SidebarProvider>
         </ThemeProvider>
       </body>
     </html>
