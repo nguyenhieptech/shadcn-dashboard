@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
 import { Sheet, SheetContent, SheetTitle } from "@/components/ui/sheet";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -387,7 +388,7 @@ const SidebarSeparator = React.forwardRef<
 SidebarSeparator.displayName = "SidebarSeparator";
 
 const SidebarContent = React.forwardRef<HTMLDivElement, React.ComponentProps<"div">>(
-  ({ className, ...props }, ref) => {
+  ({ className, children, ...props }, ref) => {
     return (
       <div
         ref={ref}
@@ -397,7 +398,9 @@ const SidebarContent = React.forwardRef<HTMLDivElement, React.ComponentProps<"di
           className
         )}
         {...props}
-      />
+      >
+        <ScrollArea data-sidebar="scroll-area">{children}</ScrollArea>
+      </div>
     );
   }
 );
