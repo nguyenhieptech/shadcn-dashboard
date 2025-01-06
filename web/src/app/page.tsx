@@ -1,10 +1,10 @@
 import { AppSidebar } from "@/components/app-shell/app-sidebar";
 import { Header } from "@/components/app-shell/header";
-import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
+import { SidebarInset } from "@/components/ui/sidebar";
 
 export default function Page() {
   return (
-    <SidebarProvider>
+    <>
       <AppSidebar />
       <SidebarInset>
         <Header />
@@ -17,6 +17,6 @@ export default function Page() {
           <div className="min-h-[100vh] flex-1 rounded-xl bg-muted/50 md:min-h-min" />
         </div>
       </SidebarInset>
-    </SidebarProvider>
+    </>
   );
 }
