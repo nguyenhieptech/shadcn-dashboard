@@ -9,6 +9,7 @@
     // Default
     "class",
     "className",
+    "classNames",
 
     // Additional Tailwind CSS Intellisense for Transition API from Headless UI
     // https://headlessui.com/react/transition#component-api
@@ -20,12 +21,24 @@
     "leaveFrom",
     "leaveTo",
 
-    // Date Range Picker
-    "classNames",
-
-    "cva"
+    // Additional, can be removed
+    "labelClassName",
+    "inputClassName",
+    "inputContainerClassName",
+    "innerClassName"
   ],
+  // https://cva.style/docs/getting-started/installation#intellisense
   "tailwindCSS.experimental.classRegex": [
-    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
-  ]
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+  ],
+  // https://x.com/nextjs/status/1783508313113800930
+  // https://code.visualstudio.com/updates/v1_88#_custom-labels-for-open-editors
+  "workbench.editor.customLabels.patterns": {
+    "**/app/**/page.tsx": "${dirname} - Page",
+    "**/app/**/layout.tsx": "${dirname} - Layout",
+    "**/components/**": "${filename} - Component",
+    "**/app/api/**/route.ts": "${dirname(1)}/${dirname} Route",
+    "**/actions/**": "${filename} - Action"
+  }
 }
